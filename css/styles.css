@@ -451,7 +451,7 @@ font-style: italic;
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-input[type=email], select, textarea {
+input[type=email], input[type=text], select, textarea {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
