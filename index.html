@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Asher Yisrael - My Portifolio - Homepage</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+<div class="grid-container">
+	<div class="item1 logo">
+	<img src="images/IMG_20200525_163725_731.jpg" alt="Logo" title="">	
+	</div>
+
+<audio id="clickSound" src="audio/click.wav"></audio>
+<audio id="nav1Sound" src="audio/nav1.wav"></audio>
+<audio id="nav2Sound" src="audio/nav2.wav"></audio>
+<audio id="nav3Sound" src="audio/nav3.wav"></audio>
+<audio id="nav4Sound" src="audio/nav4.wav"></audio>
+
+<div class="item2 nav">
+	<ul>
+  <li><a href="index.html" onmouseover="playSound('nav1Sound')">Home</a></li>
+  <br>
+  <li><a href="about.html" onmouseover="playSound('nav2Sound')">About Me</a></li> 
+  <br>
+  <li><a href="projects.html" onmouseover="playSound('nav3Sound')">My Work</a></li>
+  <br>
+  <li><a href="contacts.html" onmouseover="playSound('nav4Sound')">Contact Me</a></li>  	
+	</ul>
+</div>
+<div class="hero">
+<div class="herotext">
+	<h1>Welcome to my portifolio...</h1>
+	<p id="p2">אָשֵׁר</p>
+	<br>
+	<a href="#" class="herobutton" id="btn1" onclick="playSound('clickSound'); delayRedirect(event, 1000);">Learn More</a>
+	<br>
+	<button class="heronav" onclick="playSound('clickSound'); heroBtn(2);"><</button>
+	<button class="heronav" onclick="playSound('clickSound'); heroBtn(0);">&#9091;</button>
+	<button class="heronav" onclick="playSound('clickSound'); heroBtn(1);">></button>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+    </div>
+<div class="footer">
+<p>© <span id="year"></span> by Asher Yisrael.</p>
+</div>
+</div>
+</body>
+<script type="text/javascript" src="js/script.js"></script>
+</html>

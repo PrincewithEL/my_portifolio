@@ -1,0 +1,584 @@
+body{
+	background-color: black;
+	color: white;
+	font-family: "Garamond", serif;
+}
+
+/* Flashlight Overlay */
+:root {
+  cursor: default;
+  --cursorX: 50vw;
+  --cursorY: 50vh;
+}
+:root:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  pointer-events: none;
+  background: radial-gradient(
+    circle 20vmax at var(--cursorX) var(--cursorY),
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,.5) 80%,
+    rgba(0,0,0,.95) 100%
+  )
+}
+
+.col-md-12{
+	width: 100%;
+}
+
+.col-md-9{
+	width: 75%;
+}
+
+.col-md-6{
+	width: 50%;
+}
+
+.col-md-3{
+	width: 25%;
+}
+
+
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer;}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.wrapper {overflow: auto;}
+
+#main {
+	padding: 10px;
+	margin-left: 4px;
+}
+
+#leftsidebar {
+  float: none;
+  padding: 10px;
+  width: auto;
+}
+
+#menulist {
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul{
+	color: white;
+	list-style-type: none;
+}
+
+.nav a{
+  color: white;
+  text-decoration: none;
+}
+
+.nav a:hover{
+  font-style: italic;
+}
+
+#hero{
+
+}
+
+.logo img{
+width: 100px;
+position: relative;
+left: 100px;
+}
+
+.heroimg img{
+border-color: black;
+animation-name: example;
+animation-duration: 7s;
+border-width: 10px;
+border-style: dashed;
+border-radius: 60%;
+width: 30%;
+height: 15%;
+position: relative; 
+}
+
+@keyframes example {
+  from {border-color: grey;}
+  to {border-color: white;}
+}
+
+.herotext{
+text-align: center;
+width: 100%;
+position: relative;
+right: -100px;
+}
+
+.herobutton{
+position: relative; 
+font-family: "Garamond", serif;
+background-color: white; 
+color: black;
+font-weight: bold;
+padding: 15px 32px;
+text-align: center;
+display: inline-block;
+font-size: 16px;
+border-radius: 70%;
+}
+
+.herobutton a{
+  text-decoration: none;
+  color: white;
+}
+
+.herobutton:hover{
+background-color: black; 
+color: white;
+font-style: italic;
+}
+
+.heronav{
+position: relative; 
+background-color: white; 
+color: black;
+font-weight: bold;
+padding: 15px 32px;
+text-align: center;
+display: inline-block;
+font-size: 16px;
+top: 32px;
+border-radius: 70%;
+}
+
+.heronav:hover{
+background-color: black; 
+color: white;
+font-style: italic;
+}
+
+#about{
+	color: white;
+	text-align: center;
+	width: 80%;
+	position: relative;
+	font-size: 24px;
+    right: -120px;
+}
+
+#abouthead{
+text-align: center;
+}
+
+#abouttext{
+text-align: justify;
+}
+
+.aboutlist{
+	list-style-type: none;
+}
+
+#aboutlistitem{
+text-align: center;
+}
+
+#aboutlistitem a{
+color: white;
+text-decoration: none;
+}
+
+.abouttable tr, td{
+border-style: none;
+padding: 1px 2px;
+text-align: justify;
+}
+
+#abouttablehead {
+border-bottom: 1px white solid;
+text-align: center;
+font-weight: bold;
+}
+
+#abouttablehead1 {
+border-bottom: 1px white solid;
+text-align: center;
+font-weight: bold;
+padding-top: 20px;
+}
+
+/*#abouttablerow:hover{
+background: white;
+color: black;
+}
+*/
+
+#abouttableimage{
+	width: 15%;
+}
+
+#abouttableimage1{
+  width: 7.5%;
+}
+
+#project{
+  color: white;
+  text-align: center;
+  width: 80%;
+  position: relative;
+  font-size: 24px;
+    right: -170px;
+}
+
+#projectimage{
+  width: 15%;
+}
+
+#projectimage1{
+  width: 7.5%;
+}
+
+#projectimage2{
+  width: 25%;
+}
+
+#projectimage2:hover{
+  background-color: white;
+}
+
+.shrink img {
+transition: 1s ease;
+}
+
+.shrink img:hover{
+-webkit-transform: scale(0.8);
+-ms-transform: scale(0.8);
+transform: scale(0.8);
+transition: 1s ease;
+}
+
+.grow img {
+transition: 2s ease;
+}
+
+.grow img:hover{
+-webkit-transform: scale(1.5);
+-ms-transform: scale(1.5);
+transform: scale(1.5);
+transition: 1s ease;
+}
+
+#projecthead{
+font-style: italic;
+}
+
+.projecttext{
+  font-size: 14px;
+  text-align: justify;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+/* Style the close button */
+.topright {
+  float: right;
+  cursor: pointer;
+  font-size: 28px;
+}
+
+.topright:hover {color: red;}
+
+.projectsbutton {
+  align-items: center;
+  background-color: white;
+  border-radius: 8px;
+  border-width: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .1),0 3px 6px rgba(0, 0, 0, .05);
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  font-family: "Garamond", serif;
+  font-size: 18px;
+  height: 52px;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  overflow: hidden;
+  padding: 0 32px;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all 150ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.projectsbuttonclicked {
+  align-items: center;
+  background-color: black;
+  border-radius: 8px;
+  border-width: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .1),0 3px 6px rgba(0, 0, 0, .05);
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  font-family: "Garamond", serif;
+  font-size: 18px;
+  height: 52px;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  overflow: hidden;
+  padding: 0 32px;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all 150ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.projectsbutton:hover {
+  box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
+  background-color: black;  
+  color: white;
+}
+
+.projectsbutton:active {
+  outline: 0;
+}
+
+.projectsbutton:focus {
+  box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
+}
+
+.projectbutton {
+  background-color: white;
+  color: black;
+  border-radius: 10em;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 1em 2em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid black;
+  box-shadow: 0 0 0 0 black;
+}
+
+.project:hover {
+  transform: translateY(-4px) translateX(-2px);
+  box-shadow: 2px 5px 0 0 black;
+};
+
+.project:active {
+  transform: translateY(2px) translateX(1px);
+  box-shadow: 0 0 0 0 black;
+};
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+input[type=email], select, textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: "Garamond", serif;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: white;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  font-size: 15px;
+  font-family: "Garamond", serif;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: black;
+  color: white;
+}
+
+.contact {
+  color: white;
+  text-align: left;
+  width: 80%;
+  position: relative;
+  font-size: 24px;
+    right: -120px;
+}
+
+#contacthead{
+text-align: center;
+}
+
+#contacttext{
+text-align: center;
+}
+
+.contacttable tr, td{
+border-style: none;
+padding: 1px 2px;
+text-align: center;
+}
+
+.contacttable a{
+  text-decoration: none;
+  color: white;
+}
+
+.contacttable a:hover{
+  color: red;
+}
+
+#contacttablehead {
+border-bottom: 1px white solid;
+text-align: center;
+font-weight: bold;
+}
+
+#contacttableimage{
+  width: 15%;
+  padding: 0px 15px;
+}
+
+@media (max-width: 420px) {
+  .button-84 {
+    height: 48px;
+  }
+}
+
+.footer{
+  color: white;
+  text-align: center;
+  width: 80%;
+  position: relative;
+  font-size: 24px;
+    right: -120px;
+}
+
+@media (max-width: 500px){
+.herotext{
+font-size: 10px;
+margin-left: -60px;
+}
+.nav ul{
+	font-size: 12px;
+}
+.logo img{
+position: relative;
+left: 40px;
+width: 90px;
+}
+#about{
+right: -40px;
+font-size: 12px;
+}
+.contact{
+right: -40px;
+font-size: 12px;
+}
+#project{
+right: -40px;
+font-size: 12px;
+}
+#contacttableimage{
+  padding: 0px 10px;
+}
+.footer{
+right: -40px;
+font-size: 12px;  
+}
+.herobutton{
+  padding: 7.5px 16px;
+}
+.heronav{
+  padding: 7.5px 16px;
+}
+.projectsbutton{
+    font-size: 12px;
+  font-weight: 300;
+  padding: 0.5em 1em;
+}
+}

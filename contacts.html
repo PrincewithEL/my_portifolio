@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Asher Yisrael - My Portifolio</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+<div class="grid-container">
+	<div class="item1 logo">
+	<img src="images/IMG_20200525_163725_731.jpg" alt="Logo" title="">	
+	</div>
+<audio id="nav1Sound" src="audio/nav1.wav"></audio>
+<audio id="nav2Sound" src="audio/nav2.wav"></audio>
+<audio id="nav3Sound" src="audio/nav3.wav"></audio>
+<audio id="nav4Sound" src="audio/nav4.wav"></audio>
+<audio id="projectSound" src="audio/project.wav"></audio>
+
+<div class="item2 nav">
+	<ul>
+  <li><a href="index.html" onmouseover="playSound('nav1Sound')">Home</a></li>
+  <br>
+  <li><a href="about.html" onmouseover="playSound('nav2Sound')">About Me</a></li> 
+  <br>
+  <li><a href="projects.html" onmouseover="playSound('nav3Sound')">My Work</a></li>
+  <br>
+  <li><a href="contacts.html" onmouseover="playSound('nav4Sound')">Contact Me</a></li>  	
+	</ul>
+</div>
+<div class="hero">
+<div class="contact">
+<h2 id="contacthead">Contact Me</h2>
+<p id="contacttext">Reach out to me on any the following means or using the form below:</p>
+<table class="contacttable">
+<tr>
+<td>Email Address: <a href="mailto:asher.njoroge@strathmore.edu">asher.njoroge@strathmore.edu</a></td>
+</tr>
+<tr>
+<td>Phone Number: <a href="tel:+254 780 093 961">+254 780 093 961</a></td>
+</tr>
+<tr>
+<td class="shrink">
+<br>
+<br>
+<a href="https://www.linkedin.com/in/asher-njoroge-b3b4292a7/" target="_blank" onclick="playSound('projectSound');"><img id="contacttableimage" src="images/li.png" alt="Linkedin" title="Linkedin"></a> <a href="https://www.instagram.com/music_by_asher/" target="_blank" onclick="playSound('projectSound');"><img id="contacttableimage" src="images/ig.png" alt="Instagram" title="Instagram"></a> <a href="https://www.youtube.com/channel/UCVfpAKFc15Fv8GDZmJg6uBw" target="_blank" onclick="playSound('projectSound');"><img id="contacttableimage" src="images/yt.png" alt="YouTube" title="YouTube"></a>  <a href="https://github.com/PrincewithEL" target="_blank" onclick="playSound('projectSound');"><img id="contacttableimage" src="images/git.jpg" alt="GitHub" title="GitHub"></a></td>
+</tr>
+</table>
+<div class="contactform">
+  <form action="php/sendmail.php" method="POST" enctype="form-data/multipart">
+<br>
+<br>
+		<label for="name">Email Address:</label>
+    <input type="text" required id="name" name="name" placeholder="Your Name..">
+    <br>
+    <label for="email">Email Address:</label>
+    <input type="email" required id="email" name="email" placeholder="Your Email Address..">
+    <br>
+    <label for="subject">Subject:</label>
+    <select id="subject" required name="subject">
+      <option value="" selected disabled>Kindly Select the Subject of Your Message</option>
+      <option value="Enquiry">Enquiry</option>
+      <option value="Feedback">Feedback</option>
+      <option value="Other">Other</option>
+    </select>
+    <br>
+    <textarea type="text" rows="5" required id="message" name="message" placeholder="Your Message.."></textarea>
+    <input type="submit" name="sendmessage" value="Submit">
+  </form>
+</div>
+</div>
+<div class="footer">
+<p>© <span id="year"></span> by Asher Yisrael.</p>
+</div>
+</div>
+</body>
+<script type="text/javascript" src="js/script.js"></script>
+</html>

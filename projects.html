@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Asher Yisrael - My Portifolio</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+<div class="grid-container">
+	<div class="item1 logo">
+	<img src="images/IMG_20200525_163725_731.jpg" alt="Logo" title="">	
+	</div>
+
+<audio id="nav1Sound" src="audio/nav1.wav"></audio>
+<audio id="nav2Sound" src="audio/nav2.wav"></audio>
+<audio id="nav3Sound" src="audio/nav3.wav"></audio>
+<audio id="nav4Sound" src="audio/nav4.wav"></audio>
+<audio id="projectSound" src="audio/project.wav"></audio>
+
+<div class="item2 nav">
+	<ul>
+  <li><a href="index.html" onmouseover="playSound('nav1Sound')">Home</a></li>
+  <br>
+  <li><a href="about.html" onmouseover="playSound('nav2Sound')">About Me</a></li> 
+  <br>
+  <li><a href="projects.html" onmouseover="playSound('nav3Sound')">My Work</a></li>
+  <br>
+  <li><a href="contacts.html" onmouseover="playSound('nav4Sound')">Contact Me</a></li>  	
+	</ul>
+</div>
+<div class="hero">
+<div id="project">
+<h2 id="projecthead">Projects That I Have Worked On</h2>
+<h3>My Projects</h3>
+
+<div>
+<button class="projectsbutton" role="button" onclick="openProject(event, 'Active')" id="defaultOpen">Active</button>
+<button class="projectsbutton" role="button" onclick="openProject(event, 'Completed')">Completed</button>
+</div>
+
+<div id="Active" class="tabcontent">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <h3>Site Sync (React JS & SQL)</h3>
+  <p>A web application in development made to improve the efficiency in communication between clients and contractors at Questworks Limited.</p>
+ <a class="grow" href="https://github.com/PrincewithEL/site_sync" onclick="playSound('projectSound');" target="_blank"><img id="projectimage2" src="images/sitesync.png" alt="Project Icon C++ Site Sync" title="Click Me To Access the Project"></a>
+ <br>
+   <h3>Spin Saga (C#)</h3>
+  <p>A game in development using Unity Game Engine for the scene design, C# for the logic, and LMMS/FL Studio for the soundtrack and FX.</p>
+ <a class="grow" href="https://github.com/danmaina1/Spin-saga-Unity-" onclick="playSound('projectSound');" target="_blank"><img id="projectimage1" src="images/unity.png" alt="Project Icon for Spin Saga" title="Click Me To Access the Project"></a>
+  <a class="grow" href="videos/spinsaga.mp4" onclick="playSound('projectSound');" target="_blank"><img id="abouttableimage1" src="images/video.png" alt="View Demo of Dodge It!" title="View Demo of Dodge It!"></a>
+ <br>
+  <h3>Payroll Management (React JS & Django)</h3>
+  <p>A web application in development designed to assist in the payroll and work schedule management.</p>
+ <a class="grow" href="#" onclick="playSound('projectSound');" target="_blank"><img id="projectimage" src="images/salary.png" alt="Project Icon Payroll Management System" title="Click Me To Access the Project"></a>
+ <br> 
+   <h3>MIDI Recreations (Music)</h3>
+  <p>A passion project consisting of MIDIs recorded and transcribed in a DAW called LMMS. So far 113 recreations of popular and some favourite songs, OSTs, and themes of mine.</p>
+ <a class="grow" href="https://drive.google.com/open?id=10NxZEoA3MdMjuFNUAgTb8e8jX5XilywV&usp=drive_fs" onclick="playSound('projectSound');" target="_blank"><img id="projectimage" src="images/lmms.png" alt="Project Icon for MIDI Recreation for LMMS" title="Click Me To Access the Project"></a>
+ <br>
+</div>
+
+<div id="Completed" class="tabcontent">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <h3>Cinema Management System (C++)</h3>
+  <p>A C++ Project made using CodeBlocks connected to a MySQL database which helps to manage cinema tickets, timetables, and movie schedules.</p>
+ <a class="grow" href="https://github.com/PrincewithEL/Movie-Ticket-System-" onclick="playSound('projectSound');" target="_blank"><img id="projectimage" src="images/c++cinema.png" alt="Project Icon C++ Cinema Management System" title="Click Me To Access the Project"></a>
+ <br>
+  <h3>Cinema Management System (Java)</h3>
+  <p>A JavaFX Project made using NetBeans IDE connected to a MySQL database which helps to manage cinema tickets and movie schedules.</p>
+ <a class="grow" href="https://github.com/PrincewithEL/cinema-management-system" onclick="playSound('projectSound');" target="_blank"><img id="projectimage" src="images/cinema.png" alt="Project Icon JavaFX Cinema Management System" title="Click Me To Access the Project"></a>
+ <br>
+   <h3>EABL Database Project (SQL)</h3>
+  <p>A Project made using MySQL Database via the XAMPP Control Panel for a business scenario on East African Bweries Limited.</p>
+ <a class="grow" href="https://drive.google.com/file/d/1gIz8v0dTaiHB4U07D0PbhrCio9Sl3H2c/view?usp=sharing" onclick="playSound('projectSound');" target="_blank"><img id="projectimage" src="images/database.png" alt="Project Icon EABL Database Project" title="Click Me To Access the Project"></a>
+ <br> 
+    <h3>Book Recommendation Android App (Kotlin, XML, & SQLite)</h3>
+  <p>An Android App made using Kotlin, XML, & SQLite with a Firebase Database to provide users with book recomendations, based on their preferences.</p>
+ <a class="grow" href="https://github.com/PrincewithEL/book_recommendation_app_-Group-1-" onclick="playSound('projectSound');" target="_blank"><img id="projectimage" src="images/bookshelf.png" alt="Project Icon Book Recommendation Android" title="Click Me To Access the Project"></a>
+ <br> 
+    <h3>Discrete Event Simulation Servlet App (Java, XML, & MySQL)</h3>
+  <p>An Java Servlet App made using Java, XML, & MySQL Database to carry out discrete event simulations.</p>
+ <a class="grow" href="https://drive.google.com/drive/folders/1MjCfc_eUNmKcRXuNjpIuHtcdE0ct5ml4?usp=drive_link" onclick="playSound('projectSound');" target="_blank"><img id="projectimage" src="images/simulation.png" alt="Project Icon DES Servlet App" title="Click Me To Access the Project"></a>
+ <br>  
+    <h3>Duel of Decks (Kotlin & XML)</h3>
+  <p>An Android Game made using Kotlin & XML, which pits two players against each other in an intense RPG setting with a deck of powerful but random cards.</p>
+ <a class="grow" href="https://github.com/PrincewithEL/duel-of-decks" onclick="playSound('projectSound');" target="_blank"><img id="projectimage" src="images/cards.png" alt="Project Icon Duel of Decks Android" title="Click Me To Access the Project"></a>
+ <br> 
+     <h3>Dodge It! (3D Modelling & Python)</h3>
+  <p>A PC Game made using 3D Models in Blender & Python for the scoreboard logic, where the player dodges obstacles, shoots enemies, and collects coins to climb the leaderboard.</p>
+ <a class="grow" href="https://drive.google.com/drive/folders/1175laILSlJhzCFUQPw9lC7W_aSCVOLbu?usp=sharing" onclick="playSound('projectSound');" target="_blank"><img id="projectimage1" src="images/blender.png" alt="Project Icon Dodge It" title="Click Me To Access the Project"></a>
+ <a class="grow" onclick="playSound('projectSound');" href="videos/dodgeit.mp4" target="_blank"><img id="projectimage1" src="images/video.png" alt="View Demo of Dodge It!" title="View Demo of Dodge It!"></a>
+ <br>  
+</div>
+</div>
+<div class="footer">
+<p>© <span id="year"></span> by Asher Yisrael.</p>
+</div>
+</div>
+</body>
+<script type="text/javascript" src="js/script.js"></script>
+</html>
