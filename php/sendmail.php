@@ -39,7 +39,7 @@ if(isset($_POST['sendmessage']) && $_SERVER['REQUEST_METHOD'] === 'POST'){
                 $mail->setFrom($email); 
                 $mail->addAddress('asher.njoroge@strathmore.edu'); 
                 $mail->isHTML(true);
-                $mail->Subject = 'To Asher Yisrael';
+                $mail->Subject = 'To Asher Yisrael - From ' . $name .' on ' . $subject . ' ';
                 $mail->Body = 'Dear Asher,
 
                 Hello Asher my name is ' . $name . ', I trust that this email finds you well. I am writting to you concerning a/an <b>' . $subject '</b>.
